@@ -470,17 +470,38 @@ HMI Display
 
 # 📸 Hardware Gallery
 
-> Add these images inside the `/images` folder.
 
 | Image | Description |
 |--------|-------------|
-| `images/plc-kit.jpg` | PLC Trainer Kit |
-| `images/hmi.png` | HMI Interface |
-| `images/automation-studio.png` | Automation Studio Project |
-| `images/iphysics.png` | Digital Twin |
-| `images/conveyor.png` | Lift Simulation |
-| `images/workflow.png` | Control Workflow |
+## PLC Trainer
 
+<p align="center">
+<img src="images/plc-kit.jpg" width="850">
+</p>
+
+---
+
+## HMI
+
+<p align="center">
+<img src="images/hmi-home.png" width="850">
+</p>
+
+---
+
+## Automation Studio
+
+<p align="center">
+<img src="images/automation-studio.png" width="850">
+</p>
+
+---
+
+## Digital Twin
+
+<p align="center">
+<img src="images/iphysics.png" width="850">
+</p>
 ---
 
 > **"Industrial automation transforms repetitive processes into intelligent, safe, and efficient systems through precision control and real-time monitoring."**
@@ -1156,19 +1177,39 @@ The current implementation serves as a strong foundation for more advanced indus
 
 # 📷 Project Gallery
 
-> Add these images inside the **images/** folder.
+
 
 | Image | Description |
 |--------|-------------|
-| `banner.png` | Project Banner |
-| `plc-kit.jpg` | PLC Trainer Kit |
-| `automation-studio.png` | Automation Studio |
-| `hmi-home.png` | Main HMI Screen |
-| `lift-operation.png` | Lift Simulation |
-| `workflow.png` | Automation Workflow |
-| `iphysics.png` | Digital Twin |
-| `implementation.jpg` | Practical Setup |
+## PLC Trainer
 
+<p align="center">
+<img src="images/plc-kit.jpg" width="850">
+</p>
+
+---
+
+## HMI
+
+<p align="center">
+<img src="images/hmi-home.png" width="850">
+</p>
+
+---
+
+## Automation Studio
+
+<p align="center">
+<img src="images/automation-studio.png" width="850">
+</p>
+
+---
+
+## Digital Twin
+
+<p align="center">
+<img src="images/iphysics.png" width="850">
+</p>
 ---
 
 # 📄 Documentation
