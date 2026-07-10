@@ -1,0 +1,97 @@
+(*********************************************************************************
+ * Copyright: B&R
+ * Author:    SAMARTH
+ * Created:   April 28, 2020/11:44 AM 
+ *********************************************************************************)
+
+	PROGRAM _INIT
+		selectLift := 0;
+END_PROGRAM
+
+
+	PROGRAM _CYCLIC
+
+		(* Default OFF *)
+		doConvTop    := FALSE;
+		doConvBottom := FALSE;
+		doLiftTop    := FALSE;
+		doLiftBottom := FALSE;
+		doLiftUnload := FALSE;
+		doConvLift   := FALSE;
+
+		CASE selectLift OF
+
+			0:  (* WAIT FOR FIRST BOX *)
+				doConvTop    := TRUE;
+				doConvBottom := TRUE;
+
+				IF diConvTop THEN
+					selectLift := 1;     (* Top box first *)
+				ELSIF diConvBottom THEN
+					selectLift := 2;     (* Bottom box first *)
+				END_IF;
+
+
+			1:  (* MOVE LIFT TO TOP *)
+				doLiftTop := TRUE;
+
+				IF diLiftTop THEN
+					doLiftTop  := FALSE;
+					selectLift := 3;
+				END_IF;
+
+
+			2:  (* MOVE LIFT TO BOTTOM *)
+				doLiftBottom := TRUE;
+
+				IF diLiftBottom THEN
+					doLiftBottom := FALSE;
+					selectLift   := 3;
+				END_IF;
+
+
+			3:  (* LOAD BOX ONTO LIFT – SMOOTH TRANSFER *)
+				doConvLift := TRUE;
+
+				(* Run only the selected conveyor *)
+				IF selectLift = 3 THEN
+					IF diConvTop THEN
+						doConvTop := TRUE;
+					ELSIF diConvBottom THEN
+						doConvBottom := TRUE;
+					END_IF;
+				END_IF;
+
+				(* Wait until box is fully on lift *)
+				IF diBoxLift THEN
+					doConvLift   := FALSE;
+					doConvTop    := FALSE;
+					doConvBottom := FALSE;
+					selectLift   := 4;
+				END_IF;
+
+
+			4:  (* MOVE LIFT TO UNLOAD POSITION *)
+				doLiftUnload := TRUE;
+
+				IF diLiftUnload THEN
+					doLiftUnload := FALSE;
+					selectLift   := 5;
+				END_IF;
+
+
+			5:  (* UNLOAD BOX *)
+				doConvLift := TRUE;
+
+				IF diUnloaded THEN
+					doConvLift := FALSE;
+					selectLift := 0;
+				END_IF;
+
+
+			ELSE
+				selectLift := 0;
+
+		END_CASE;
+
+END_PROGRAM
