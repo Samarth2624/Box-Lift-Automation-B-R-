@@ -476,7 +476,7 @@ HMI Display
 ## PLC Trainer
 
 <p align="center">
-<img src="images/plc-kit.jpg" width="850">
+<img src="images/plc-kit.png" width="850">
 </p>
 
 ---
@@ -1184,7 +1184,7 @@ The current implementation serves as a strong foundation for more advanced indus
 ## PLC Trainer
 
 <p align="center">
-<img src="images/plc-kit.jpg" width="850">
+<img src="images/plc-kit.png" width="850">
 </p>
 
 ---
