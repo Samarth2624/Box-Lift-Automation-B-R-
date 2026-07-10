@@ -1173,7 +1173,11 @@ The current implementation serves as a strong foundation for more advanced indus
 
 # 📄 Documentation
 
-The repository contains complete documentation for understanding the project.
+## 📄 Internship Report
+
+📘 Read the complete internship documentation here:
+
+[📥 Internship Report](docs/Internship_Report.pdf)
 
 | Document | Description |
 |----------|-------------|
